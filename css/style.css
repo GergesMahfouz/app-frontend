@@ -1,0 +1,171 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.header-content{
+    width: 100%;
+    height:55px;
+    background-color: #85bfda60;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    box-shadow: 1px 1px 10px 5px #000 ;
+}
+.brand{
+    text-decoration: none;
+    color: #050505;
+    font-size: 26px;
+    font-weight: bold;
+}
+.header-content nav ul{
+    display: flex;
+}
+.header-content nav ul li{
+    list-style: none;
+}
+.link ul li a{
+    text-decoration: none;
+    display: block;
+    min-width: 80px;
+    padding: 2px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 22px;
+    color: #000;
+}
+#user_info{
+    display: none;
+}
+.section-form{
+    min-width: 45%;
+    background: #85bfda60;
+    border-radius: 20px;
+    box-shadow: 1px 1px 20px 10px #4b4b4b;
+    position: absolute;
+    top: 50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    padding: 10px;
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+}
+.section-form form input{
+    display: block;
+    width: 100%;
+    min-height:30px;
+    font-size: 18px;
+    margin-top: 10px;
+    border-radius: 10px;
+    outline: none;
+    padding: 5px;
+    letter-spacing: 1px;
+    word-spacing: 0.2px;
+}
+.section-form form input:focus{
+    border: 3px solid #5896f9;
+
+}
+.section-form form input[type="submit"]:focus{
+    background-color: #5896f9;
+    color:#fff
+}
+.task{
+    width: 100%;
+    padding: 20px;
+}
+.products {
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 15px;
+}
+@media(max-width:900px){
+    .products {
+    grid-template-columns: repeat(2 , 1fr);
+}
+}
+.product1 img{
+    width: 180px;
+    height:230px;
+}
+.product1{
+    background-color: #fff;
+    padding: 10px;
+    text-align: center;
+    border-radius: 20px;
+}
+.product1:hover{
+    box-shadow: 1px 1px 25px 2px rgb(0, 0, 0);
+}
+.product1 h2 {
+    font-weight: bold;
+}
+.product1 p {
+    font-size: 20px;
+    color: #0ec12f;
+    margin-top: 10px;
+}
+.product1 button{
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    height:30px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+}
+.button2{
+    background-color: rgb(30, 90, 255);
+}
+.button2:hover{
+    box-shadow: 1px 1px 25px 2px blue;
+}
+.button3 {
+    background-color: rgb(253, 39, 39);
+}
+.button3:hover{
+    box-shadow: 1px 1px 25px 2px red;
+
+}
+
+.shopping_cart{
+    margin: 0 20px;
+    position: relative;
+}
+.shopping_cart i{
+    font-size: 25px;
+    cursor: pointer;
+    margin-top: 2px;
+}
+.badge{
+    display: none;
+    min-width: 18px;
+    height:18px;
+    border-radius: 50%;
+    background-color: #0ec12f;
+    color:#fff;
+    text-align: center;
+    font-size: 18px;
+    position: absolute;
+    padding: 0 2px;
+    top:-10px;
+    right:-11px;
+}
+.carts_products{
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    transform: translate(-85px, 18px);
+    background-color: rgb(141, 141, 141);
+    border-radius: 5px;
+    padding: 10px;
+    border: 3px solid #5896f9;
+}
+.link ul .carts_products a{
+    background-color: #5896f9;
+    margin-left: -1px;
+}
