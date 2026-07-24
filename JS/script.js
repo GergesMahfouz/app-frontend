@@ -1,14 +1,3 @@
-let link = document.querySelector("#link")
-let user_info = document.querySelector("#user_info")
-let user = document.querySelector("#user")
-
-if (localStorage.getItem("username"))
-{
-    link.remove()
-    user_info.style.display = "flex"
-    user.innerHTML = localStorage.getItem("username")
-}
-//////////////////////////////////////////////////////////
 let allProduct = document.querySelector(".products")
 let q = [
     {
@@ -90,15 +79,24 @@ function draw(){
 draw()
 let addDiv = document.querySelector(".carts_products div")
 let counCart = document.querySelector("#counter")
-let addedcart = []
+let addedcart = localStorage.getItem("productsCart") ? JSON.parse(localStorage.getItem("productsCart")) : []
+if(localStorage.getItem("productsCart")){
+    addedcart.map(item => {
+        addDiv.innerHTML += `<p style="font-size:20px">${item.name}</p>`
+    })
+    counCart.style.display="block"
+    counCart.innerHTML = addedcart.length
+}
 function addCart(id){
     let att = q.find ( (item) => item.id === id)
-    addDiv.innerHTML = `<p style="font-size:20px">${att.name}</p>`+ addDiv.innerHTML
+    addDiv.innerHTML += `<p style="font-size:20px">${att.name}</p>`
     let divs = addDiv.children
     counCart.style.display = "block"
     counCart.innerHTML = divs.length
     addedcart = [...addedcart , att]
     localStorage.setItem("productsCart" , JSON.stringify(addedcart))
+    let counter = divs.length
+    localStorage.setItem("counter" , counter)
 }
 
 let iconcart = document.querySelector(".shopping_cart i")

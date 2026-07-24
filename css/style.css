@@ -81,11 +81,31 @@
     grid-template-columns: repeat(4 , 1fr);
     gap: 15px;
 }
-@media(max-width:900px){
+@media(max-width:1024px){
+    .products {
+    grid-template-columns: repeat(3 , 1fr);
+}
+.header-content{
+    padding: 0 40px;
+}
+}
+@media(max-width:760px){
     .products {
     grid-template-columns: repeat(2 , 1fr);
 }
+.header-content{
+    padding: 0 30px;
 }
+}
+@media(max-width:630px){
+    .products {
+    grid-template-columns: repeat(1 , 1fr);
+}
+.header-content{
+    padding: 0 10px;
+}
+}
+
 .product1 img{
     width: 180px;
     height:230px;
