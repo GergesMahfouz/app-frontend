@@ -97,6 +97,9 @@ function addCart(id){
     localStorage.setItem("productsCart" , JSON.stringify(addedcart))
     let counter = divs.length
     localStorage.setItem("counter" , counter)
+    if (!(localStorage.getItem("username"))){
+        alert("please enter your data")
+    }
 }
 
 let iconcart = document.querySelector(".shopping_cart i")
@@ -112,5 +115,6 @@ iconcart.addEventListener("click" , function(){
     }
     }
 })
+
 
 
